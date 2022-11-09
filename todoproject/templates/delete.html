@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="banner-text">
+                    <h1>TODO APPLICATION</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="forms">
+            <form method="post" class="p-3 shadow">
+                     {% csrf_token %}
+                 <p class="p"><b>Are you sure this task is done?</b></p>
+
+                <button class="btn btn-primary" type="submit">CONFIRM</button>
+                 <a  class="btn btn-danger"  href="{% url 'todoapp:home'  %}">CANCEL</a>
+            </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
